@@ -49,22 +49,16 @@ public class ThreatRadius : MonoBehaviour
         if (distance < threatRadius[2]) {
             // Polo in the closest ring
             Debug.Log("polo in the 3 ring");
-            if (polo.transform.GetChild(2).GetComponent<AudioSource>().mute) {
-                SetMute(polo, new bool[]{false, false, false});
-            }
+            SetMute(polo, new bool[]{false, false, false});
         } else if (distance < threatRadius[1]){
             // Polo in the second closest ring
             Debug.Log("polo in the 2 ring");
-            if (polo.transform.GetChild(1).GetComponent<AudioSource>().mute) {
-                SetMute(polo, new bool[]{false, false, true});
-            }
+            SetMute(polo, new bool[]{false, false, true});
 
         } else {
             // Polo in the furthest ring
             Debug.Log("polo in the 1 ring");
-            if (polo.transform.GetChild(0).GetComponent<AudioSource>().mute) {
-                SetMute(polo, new bool[]{false, true, true});
-            }
+            SetMute(polo, new bool[]{false, true, true});
 
         }
     }
