@@ -30,7 +30,7 @@ public class ThreatRadius : MonoBehaviour
             // To far away so should play the background sound
             SetMute(polo1, new bool[]{true, true, true});
             SetMute(polo2, new bool[]{true, true, true});
-            background.GetComponent<AudioSource>().mute = false;
+            background.GetComponent<AudioSource>().mute = fal​se;
             Debug.Log("Background Sound");
         } else {
             background.GetComponent<AudioSource>().mute = true;
@@ -58,7 +58,7 @@ public class ThreatRadius : MonoBehaviour
         } else {
             // Polo in the furthest ring
             Debug.Log("polo in the 1 ring");
-            SetMute(polo, new bool[]{false, true, true});
+            SetMute(polo, new bool[]{false, t​rue, true});
 
         }
     }
